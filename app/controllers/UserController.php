@@ -10,12 +10,22 @@ class UserController extends \Phalcon\Mvc\Controller
 
     public function projectAction($id)
     {
+        //Nom de l'utilisateur
+        $user = User::findFirst($id);
+        $this->view->setVar("user", $user);
+
+        //Nom du projet
+        $projects = Projet::find("idClient =".$id);
+        $this->view->setVar("projects", $projects);
+
+        //Barre avancement du projet
+
+        //Nombre de jours restant
+
+        //Bouton ouvrir
         $bootstrap=$this->jquery->bootstrap();
-        $bootstrap->htmlButton("btOkay","Okay");
-        $bootstrap->htmlButton("btMasquer","Afficher/Masquer Bouton Okay","btn-primary",$this->jquery->toggle("#btOkay"));
-        $this->jquery->doJQueryAndBindTo("#checkbox", "change", "#div", "toggle", "$('#checkbox').is(':checked')");
+        $bootstrap->htmlButton("btOpen","Ouvrir...");
         $this->jquery->compile($this->view);
-        echo $id;
     }
 
 }

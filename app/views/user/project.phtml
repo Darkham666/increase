@@ -3,13 +3,21 @@
 
             <?php
 
-            echo "<h1>Mes projets : </h1>";
-
-            echo $this->getContent();
+            echo "<h1>Mes projets : ".$user->identite."</h1>";
 
             echo "<br>";
 
-            echo $q['btOkay']." ".$q["btMasquer"];
+
+
+            //echo $projects->nom;
+            for($i = 0; $i < count($projects); $i++) {
+                echo $projects[$i]->nom;
+                echo "<br>";
+            }
+
+            echo "<br>";
+
+            echo $q['btOpen'];
 
             ?>
 
