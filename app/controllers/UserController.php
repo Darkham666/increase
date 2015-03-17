@@ -8,14 +8,14 @@ class UserController extends \Phalcon\Mvc\Controller
 
     }
 
-    public function projectAction($id)
+    public function projectsAction($idUser)
     {
         //Nom de l'utilisateur
-        $user = User::findFirst($id);
+        $user = User::findFirst($idUser);
         $this->view->setVar("user", $user);
 
         //Nom du projet
-        $projects = Projet::find("idClient =".$id);
+        $projects = Projet::find("idClient =".$idUser);
         $this->view->setVar("projects", $projects);
 
         //Barre avancement du projet
@@ -29,7 +29,6 @@ class UserController extends \Phalcon\Mvc\Controller
         $bootstrap->htmlButton("btOpen","Ouvrir...");
         $this->jquery->compile($this->view);
     }
-
 
 }
 
