@@ -14,6 +14,10 @@ class ProjectController extends \Phalcon\Mvc\Controller
         $name = Projet::findFirst("id =".$id);
         $this->view->setVar("name", $name);
 
+        //Nom de l'identifiant
+
+
+        //Noms équipe
     }
 }
 

@@ -1,3 +1,21 @@
-<?php
+<div class="container">
+    <div class="row">
 
-echo $name->nom;
+        <?php
+
+            echo '<h1>'.$name->nom.'</h1>';
+            echo '<br>';
+            echo '<h3>Détails du projet</h3><br>';
+            echo '<h4>Description</h4>';
+            echo $name->description;
+            echo '<br>Date de lancement &emsp;&emsp;&emsp; Date de fin prévue<br>';
+            echo $name->dateLancement."&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;".$name->dateFinPrevue;
+
+            echo '<h3>Equipe</h3>';
+
+        ?>
+
+    </div>
+</div>
+
+<?=$script_foot?>
