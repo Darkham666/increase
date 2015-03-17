@@ -1,6 +1,5 @@
 <?php
 
-use Ajax\Jquery;
 $loader = new \Phalcon\Loader();
 
 /**
@@ -9,7 +8,6 @@ $loader = new \Phalcon\Loader();
 $loader->registerDirs(
     array(
         $config->application->controllersDir,
-        $config->application->modelsDir,
-        $config->application->libraryDir
+        $config->application->modelsDir
     )
 )->register();
