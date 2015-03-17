@@ -19,6 +19,8 @@ class UserController extends \Phalcon\Mvc\Controller
         $this->view->setVar("projects", $projects);
 
         //Barre avancement du projet
+        $bootstrap=$this->jquery->bootstrap();
+        //$bootstrap->htmlProgress
 
         //Nombre de jours restant
 
@@ -27,6 +29,7 @@ class UserController extends \Phalcon\Mvc\Controller
         $bootstrap->htmlButton("btOpen","Ouvrir...");
         $this->jquery->compile($this->view);
     }
+
 
 }
 

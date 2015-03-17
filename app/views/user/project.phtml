@@ -7,13 +7,18 @@
 
             echo "<br>";
 
-
-
-            //echo $projects->nom;
             for($i = 0; $i < count($projects); $i++) {
-                echo $projects[$i]->nom;
+                $joursRest = (strtotime($projects[$i]->dateFinPrevue) - strtotime($projects[$i]->dateLancement)) / (60 * 60 * 24);
+                echo "<br>";
+                echo $projects[$i]->nom." nombre de jours restant : ".$joursRest;
                 echo "<br>";
             }
+
+            echo "<br>";
+
+            //affiche la date d'aujourd'hui
+            //$dateNow = date("j F Y", strtotime("now"));
+
 
             echo "<br>";
 
