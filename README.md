@@ -1,7 +1,7 @@
 ![Increase logo](http://open-beer.kobject.net/img/Increase.png "Increase logo")
 
 # devteam
-Darkham (alias PICARD Thomas) is proud to announce INCREASE !
+Darkham (alias PICARD Thomas) is proud to announce you INCREASE !
 
 # increase
 A Phalcon web application to manage the progress of projects, and improve communication with the customer

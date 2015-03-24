@@ -8,8 +8,11 @@
             echo '<h3>Détails du projet</h3><br>';
             echo '<h4>Description</h4>';
             echo $name->description;
-            echo '<br>Date de lancement &emsp;&emsp;&emsp; Date de fin prévue<br>';
-            echo $name->dateLancement."&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;".$name->dateFinPrevue;
+            //Date aujourd'hui
+            $dateNow = date("Y-m-y", strtotime("now"));
+
+            echo '<br>Date de lancement &emsp;&emsp;&emsp; Date de fin prévue &emsp;&emsp;&emsp; Date d\'aujourd\'hui<br>';
+            echo $name->dateLancement."&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;".$name->dateFinPrevue."&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;".$dateNow;
 
             echo '<h3>Equipe</h3>';
 
